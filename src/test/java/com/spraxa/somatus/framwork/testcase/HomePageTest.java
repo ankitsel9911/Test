@@ -39,7 +39,7 @@ public class HomePageTest extends TestBase {
 		extent = new ExtentReports(System.getProperty("user.dir") + "/ExtentReports/ExtentReport.html", true);
 		extent.addSystemInfo("Host Name", "Spraxa Solutions Pvt. Ltd.")
 				.addSystemInfo("Environment", "Automation Testing").addSystemInfo("User Name", "Ankit Yadav");
-		extent.loadConfig(new File(System.getProperty("user.dir") + "\\extent-config.xml"));
+		//extent.loadConfig(new File(System.getProperty("user.dir") + "\\extent-config.xml"));
 	}
 
 	@BeforeMethod
