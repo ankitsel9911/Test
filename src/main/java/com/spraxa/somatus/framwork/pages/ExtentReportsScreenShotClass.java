@@ -44,7 +44,7 @@ public class ExtentReportsScreenShotClass{
 		return destination;
 	}
 		
-	@Test
+/*	@Test
 	public void passTest(){
 		//extent.startTest("TestCaseName", "Description")
 		//TestCaseName – Name of the test
@@ -73,7 +73,7 @@ public class ExtentReportsScreenShotClass{
 	public void skipTest(){
 		logger = extent.startTest("skipTest");
 		throw new SkipException("Skipping - This is not ready for testing ");
-	}
+	}*/
 	
 	@AfterMethod
 	public void getResult(ITestResult result) throws Exception{
