@@ -14,7 +14,6 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.spraxa.somatus.framwork.base.TestBase;
-import com.spraxa.somatus.framwork.pages.ExtentReportsScreenShotClass;
 import com.spraxa.somatus.framwork.pages.HomePage;
 import com.spraxa.somatus.framwork.pages.LoginPage;
 import com.spraxa.somatus.framwork.util.TestUtil;
@@ -59,7 +58,7 @@ public class LoginPageTest extends TestBase {
 		String homePageTitle="Somatus | Patient Care";
 		Assert.assertEquals(varifyTitle, homePageTitle, prop.getProperty("homePageTitle"));
 		Thread.sleep(12000);
-		String screenshotPath = ExtentReportsScreenShotClass.getScreenhot(driver, "validLogin");
+		String screenshotPath = getScreenhot(driver, "validLogin");
 		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
 		logger.log(LogStatus.PASS, prop.getProperty("logSuccessful"));
 		extent.endTest(logger);
@@ -73,7 +72,7 @@ public class LoginPageTest extends TestBase {
 	    String actualText= loginPage.invalidLoginContaint();
 		String expectedLoginContaint= prop.getProperty("wrongUnamePname");
 		Assert.assertEquals(actualText, expectedLoginContaint, prop.getProperty("invalidUnamePname"));
-		String screenshotPath = ExtentReportsScreenShotClass.getScreenhot(driver, "invalidlogin");
+		String screenshotPath = getScreenhot(driver, "invalidlogin");
 		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
 	if(actualText.equalsIgnoreCase(expectedLoginContaint)) {
 		logger.log(LogStatus.PASS,actualText+ prop.getProperty("invalidUnameOrPass"));
@@ -89,7 +88,7 @@ public class LoginPageTest extends TestBase {
 		logger.log(LogStatus.PASS, prop.getProperty("validationLogin"));
 		 String verifyTitle=loginPage.validateLoginPage();
 		Assert.assertEquals(verifyTitle, prop.getProperty("verifyTitle"), prop.getProperty("homePageTitle"));
-		String screenshotPath = ExtentReportsScreenShotClass.getScreenhot(driver, "verifyLoginPage");
+		String screenshotPath = getScreenhot(driver, "verifyLoginPage");
 		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
 		logger.log(LogStatus.PASS, prop.getProperty("verifyLoginTitle"));
 		extent.endTest(logger);
@@ -116,7 +115,6 @@ public class LoginPageTest extends TestBase {
 
 @AfterMethod
 	public void tearDown() {
-
 		driver.quit();
 	}
 

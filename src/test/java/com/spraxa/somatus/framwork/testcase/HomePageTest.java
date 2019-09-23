@@ -1,8 +1,5 @@
 package com.spraxa.somatus.framwork.testcase;
 
-import java.io.File;
-
-import org.junit.BeforeClass;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -14,7 +11,6 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.spraxa.somatus.framwork.base.TestBase;
-import com.spraxa.somatus.framwork.pages.ExtentReportsScreenShotClass;
 import com.spraxa.somatus.framwork.pages.HomePage;
 import com.spraxa.somatus.framwork.pages.LoginPage;
 import com.spraxa.somatus.framwork.util.TestUtil;
@@ -66,7 +62,8 @@ public class HomePageTest extends TestBase {
 		homePage.verifyCareNoteSummaryButton();
 		homePage.verifyCareNoteSummaryDetail();
 
-		String screenshotPath = ExtentReportsScreenShotClass.getScreenhot(driver, "tc_02Verify");
+		//String screenshotPath = ExtentReportsScreenShotClass.getScreenhot(driver, "tc_02Verify");
+		String screenshotPath = getScreenhot(driver, "tc_02Verify");
 		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
 
 		String actualCareNoteSummary = homePage.getCareNoteSummary();
@@ -89,7 +86,7 @@ public class HomePageTest extends TestBase {
 		logger.log(LogStatus.PASS, prop.getProperty("addActivity"));
 		logger.log(LogStatus.PASS, prop.getProperty("clickAddCarePlan"));
 		homePage.VerifyAddCarePlan();
-		String screenshotPath = ExtentReportsScreenShotClass.getScreenhot(driver, "verifyAddCarePlan");
+		String screenshotPath = getScreenhot(driver, "verifyAddCarePlan");
 		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
 		logger.log(LogStatus.PASS, prop.getProperty("activities"));
 		
