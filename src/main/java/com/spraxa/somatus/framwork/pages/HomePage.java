@@ -31,7 +31,7 @@ public class HomePage extends TestBase {
 
 	///////////// TC_1//Verify Care Note Summary Button is disabled//////
 
-	@FindBy(xpath = "//div[@class='col-sm-4 col-md-4 col-lg-4']")
+	@FindBy(xpath = "//div[@class='css-10nd86i basic-single']")
 	WebElement weSelectName;
 
 	@FindBy(xpath = "//table/tbody/tr[2]/td[5]")
@@ -76,7 +76,7 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//span[contains(text(),'Active Patients')]")
 	WebElement weActivePatient;
 	
-	@FindBy(xpath = "//td[contains(text(),'Shivam Taylor')]")
+	@FindBy(xpath = "//tr[@class='ant-table-row ant-table-row-level-0'][5]/td[5]")
 	WebElement weRequiredPatientName;
 
 	@FindBy(xpath = "//table/tbody/tr[3]/td[1]")
@@ -129,7 +129,7 @@ public class HomePage extends TestBase {
 		actObjRole.sendKeys(Keys.ENTER).build().perform();
 		Thread.sleep(3000);
 		//weRequiredPatientName.click();
-		//tUtil.weClick(weRequiredPatientName);
+		tUtil.weClick(weRequiredPatientName);
 		Thread.sleep(2000);
 		/*tUtil.weClick(weProgramName);
 		Thread.sleep(2000);
