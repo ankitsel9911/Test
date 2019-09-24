@@ -251,6 +251,7 @@ public class HomePage extends TestBase {
 		actObjRole.sendKeys(Keys.ENTER).build().perform();
 		Thread.sleep(3000);
 		weRequiredPatientName.click();
+		
 		Thread.sleep(2000);
 		tUtil.weClick(weActivities);
 		Thread.sleep(2000);
@@ -260,10 +261,10 @@ public class HomePage extends TestBase {
 		Thread.sleep(2000);
 		tUtil.weClick(weCheckBoxAlcohol);
 		Thread.sleep(2000);
-		tUtil.weClick(weCheckBoxAchieveGlycemic);
-		Thread.sleep(2000);
-		tUtil.weClick(weCheckBoxAddressBarriers);
-		Thread.sleep(2000);
+		//tUtil.weClick(weCheckBoxAchieveGlycemic);
+		//Thread.sleep(2000);
+		//tUtil.weClick(weCheckBoxAddressBarriers);
+		//Thread.sleep(2000);
 
 		tUtil.weClick(weGenerate);
 		Thread.sleep(12000);
