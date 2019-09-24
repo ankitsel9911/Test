@@ -133,7 +133,7 @@ public class HomePage extends TestBase {
 		
 		Thread.sleep(3000);
 		//weRequiredPatientName.click();
-		tUtil.weClick(weRequiredPatientName);
+		//tUtil.weClick(weRequiredPatientName);
 		Thread.sleep(2000);
 		/*tUtil.weClick(weProgramName);
 		Thread.sleep(2000);
