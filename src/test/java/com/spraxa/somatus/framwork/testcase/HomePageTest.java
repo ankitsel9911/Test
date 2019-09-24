@@ -111,7 +111,7 @@ public class HomePageTest extends TestBase {
 	@AfterTest
 	public void endReport() {
 		extent.flush();
-		extent.close();
+		//extent.close();
 	}
 
 	@AfterMethod
