@@ -27,6 +27,13 @@ public class TestUtil {
 		 actObj=new Actions(driver);
 		actObj.sendKeys(value).build().perform();
 	}
+	
+	public void actionWithSendkeys(WebElement weAction, String value, WebDriver driver) {
+		Actions actObjRole = new Actions(driver);
+		actObjRole.click(weAction).build().perform();
+		actObjRole.sendKeys(Keys.ENTER, value).build().perform();
+		actObjRole.sendKeys(Keys.ENTER).build().perform();
+	}
 	//////////////////Click ///////////////////
 	public void weClick(WebElement weElement) {
 		weElement.click();

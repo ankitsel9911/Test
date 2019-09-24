@@ -123,10 +123,14 @@ public class HomePage extends TestBase {
 		
 		//tUtil.weClick(weActivePatient);
 
-		Actions actObjRole = new Actions(driver);
-		actObjRole.click(weSelectName).build().perform();
-		actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
-		actObjRole.sendKeys(Keys.ENTER).build().perform();
+//		Actions actObjRole = new Actions(driver);
+//		actObjRole.click(weSelectName).build().perform();
+//		actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
+//		actObjRole.sendKeys(Keys.ENTER).build().perform();
+		
+		tUtil.actionWithSendkeys(weSelectName, "Neha Aggarwal",driver);
+		
+		
 		Thread.sleep(3000);
 		//weRequiredPatientName.click();
 		tUtil.weClick(weRequiredPatientName);
