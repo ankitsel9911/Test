@@ -47,9 +47,11 @@ public class HomePageTest extends TestBase {
 	}
 
 	@Test
-	public void tc003() {
+	public void tc003() throws Exception {
 		logger = extent.startTest(prop.getProperty("tc02StartTest"));
 		logger.log(LogStatus.PASS, prop.getProperty("logSuccessful"));
+		String screenshotPath = getScreenhot(driver, "tc_02Verify");
+		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
 		extent.endTest(logger);
 	}
 
