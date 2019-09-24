@@ -72,11 +72,11 @@ public class HomePage extends TestBase {
 	}
 
 	/////////////////////////////////
-	int intHome = new TestUtil().randomNumber(1, 3);
+	
 	@FindBy(xpath = "//span[contains(text(),'Active Patients')]")
 	WebElement weActivePatient;
 	
-	@FindBy(xpath = "//tr[@class='ant-table-row ant-table-row-level-0'][5]/td[5]")
+	@FindBy(xpath = "//table/tbody/tr[5]/td[5]")
 	WebElement weRequiredPatientName;
 
 	@FindBy(xpath = "//table/tbody/tr[3]/td[1]")
@@ -123,18 +123,11 @@ public class HomePage extends TestBase {
 		
 		//tUtil.weClick(weActivePatient);
 
-//		Actions actObjRole = new Actions(driver);
-//		actObjRole.click(weSelectName).build().perform();
-//		actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
-//		actObjRole.sendKeys(Keys.ENTER).build().perform();
-		
 		tUtil.actionWithSendkeys(weSelectName, "Neha Aggarwal",driver);
 		
 		
-		Thread.sleep(3000);
-		//weRequiredPatientName.click();
-		//tUtil.weClick(weRequiredPatientName);
-		Thread.sleep(2000);
+		tUtil.weClick(weRequiredPatientName);
+		
 		/*tUtil.weClick(weProgramName);
 		Thread.sleep(2000);
 		tUtil.weClick(weAddActivity);

@@ -38,11 +38,7 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}
-
-	public static void main(String[] args) {
-		System.out.println("ankit");
-	}
-
+	
 	public static void initilization() {
 		String browserName = prop.getProperty("browser");
 		if (browserName.equals("chrome")) {
