@@ -54,7 +54,7 @@ public class HomePageTest extends TestBase {
 	
 	@Test
 	public void tc_01VerifyCareNoteSummaryButton() throws Exception {
-		logger = extent.startTest(prop.getProperty("tc02StartTest"));
+		///logger = extent.startTest(prop.getProperty("tc02StartTest"));
 		logger.log(LogStatus.PASS, prop.getProperty("logSuccessful"));
 		logger.log(LogStatus.PASS, prop.getProperty("selRequ"));
 		logger.log(LogStatus.PASS, prop.getProperty("clickOnReq"));
@@ -82,7 +82,7 @@ public class HomePageTest extends TestBase {
 
 	@Test()
 	public void tc_02VerifyAddCarePlan() throws Exception {
-		logger = extent.startTest(prop.getProperty("verifyAddCarePlan"));
+		//logger = extent.startTest(prop.getProperty("verifyAddCarePlan"));
 		logger.log(LogStatus.PASS, prop.getProperty("logSuccessful"));
 		logger.log(LogStatus.PASS, prop.getProperty("selRequ"));
 		logger.log(LogStatus.PASS, prop.getProperty("clickOnReq"));
