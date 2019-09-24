@@ -31,7 +31,7 @@ public class HomePage extends TestBase {
 
 	///////////// TC_1//Verify Care Note Summary Button is disabled//////
 
-	@FindBy(xpath = "//div[1]/div[2]/div/div/div[1]/div[1]")
+	@FindBy(xpath = "//div[@class='col-sm-4 col-md-4 col-lg-4']")
 	WebElement weSelectName;
 
 	@FindBy(xpath = "//table/tbody/tr[2]/td[5]")
