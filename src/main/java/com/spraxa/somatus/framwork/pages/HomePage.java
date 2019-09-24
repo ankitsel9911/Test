@@ -76,7 +76,7 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//span[contains(text(),'Active Patients')]")
 	WebElement weActivePatient;
 	
-	@FindBy(xpath = "//table/tbody/tr[5]/td[5]")
+	@FindBy(xpath = "//table/tbody/tr[5]/td[6]")
 	WebElement weRequiredPatientName;
 
 	@FindBy(xpath = "//table/tbody/tr[3]/td[1]")
