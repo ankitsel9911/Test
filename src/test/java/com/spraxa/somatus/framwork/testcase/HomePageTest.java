@@ -55,7 +55,7 @@ public class HomePageTest extends TestBase {
 		extent.endTest(logger);
 	}
 	
-	@Test
+	//@Test
 	public void tc_01VerifyCareNoteSummaryButton() throws Exception {
 		initilization();
 		loginPage = new LoginPage();
@@ -84,7 +84,7 @@ public class HomePageTest extends TestBase {
 		extent.endTest(logger);
 	}
 
-	@Test()
+	//@Test()
 	public void tc_02VerifyAddCarePlan() throws Exception {
 		initilization();
 		loginPage = new LoginPage();
