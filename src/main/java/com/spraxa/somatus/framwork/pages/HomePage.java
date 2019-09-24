@@ -128,13 +128,13 @@ public class HomePage extends TestBase {
 		
 		tUtil.weClick(weRequiredPatientName);
 		
-		/*tUtil.weClick(weProgramName);
+	    tUtil.weClick(weProgramName);
 		Thread.sleep(2000);
 		tUtil.weClick(weAddActivity);
 		Thread.sleep(3000);
 		tUtil.weClick(weAddCareNote);
 		Thread.sleep(2000);
-		Actions actObjMethos = new Actions(driver);
+		/*Actions actObjMethos = new Actions(driver);
 		actObjMethos.click(weSelectMethod).build().perform();
 		actObjMethos.sendKeys(Keys.ENTER, homeVisit).build().perform();
 		actObjMethos.sendKeys(Keys.ENTER).build().perform();
