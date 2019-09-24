@@ -123,7 +123,7 @@ public class HomePage extends TestBase {
 		actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
 		actObjRole.sendKeys(Keys.ENTER).build().perform();
 		Thread.sleep(3000);
-		weRequiredPatientName.click();
+		//weRequiredPatientName.click();
 		tUtil.weClick(weRequiredPatientName);
 		Thread.sleep(2000);
 		tUtil.weClick(weProgramName);
