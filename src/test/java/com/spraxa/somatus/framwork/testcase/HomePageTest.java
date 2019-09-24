@@ -46,7 +46,7 @@ public class HomePageTest extends TestBase {
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
-	@Test
+	//@Test
 	public void tc003() throws Exception {
 		logger = extent.startTest(prop.getProperty("tc02StartTest"));
 		logger.log(LogStatus.PASS, prop.getProperty("logSuccessful"));
@@ -70,14 +70,14 @@ public class HomePageTest extends TestBase {
 		//homePage.verifyCareNoteSummaryDetail();
 
 		//String screenshotPath = ExtentReportsScreenShotClass.getScreenhot(driver, "tc_02Verify");
-		String screenshotPath = getScreenhot(driver, "tc_02Verify");
+		/*String screenshotPath = getScreenhot(driver, "tc_02Verify");
 		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
 
 		String actualCareNoteSummary = homePage.getCareNoteSummary();
 		String ExpectedCareNoteSummary = prop.getProperty("careNote");
 		if (actualCareNoteSummary.equalsIgnoreCase(ExpectedCareNoteSummary)) {
 			logger.log(LogStatus.PASS, actualCareNoteSummary + " - : " + prop.getProperty("userClick"));
-		}
+		}*/
 		extent.endTest(logger);
 	}
 

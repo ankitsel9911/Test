@@ -31,7 +31,7 @@ public class HomePage extends TestBase {
 
 	///////////// TC_1//Verify Care Note Summary Button is disabled//////
 
-	@FindBy(xpath = "//div[contains(text(),'Ankit Yadav')]")
+	@FindBy(xpath = "//div[1]/div[2]/div/div/div[1]/div[1]")
 	WebElement weSelectName;
 
 	@FindBy(xpath = "//table/tbody/tr[2]/td[5]")
@@ -125,10 +125,10 @@ public class HomePage extends TestBase {
 
 		Actions actObjRole = new Actions(driver);
 		actObjRole.click(weSelectName).build().perform();
-		/*actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
+		actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
 		actObjRole.sendKeys(Keys.ENTER).build().perform();
 		Thread.sleep(3000);
-		//weRequiredPatientName.click();
+		/*//weRequiredPatientName.click();
 		tUtil.weClick(weRequiredPatientName);
 		Thread.sleep(2000);
 		tUtil.weClick(weProgramName);
