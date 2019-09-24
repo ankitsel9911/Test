@@ -128,7 +128,7 @@ public class HomePage extends TestBase {
 		actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
 		actObjRole.sendKeys(Keys.ENTER).build().perform();
 		Thread.sleep(3000);
-		/*//weRequiredPatientName.click();
+		//weRequiredPatientName.click();
 		tUtil.weClick(weRequiredPatientName);
 		Thread.sleep(2000);
 		tUtil.weClick(weProgramName);
@@ -136,7 +136,7 @@ public class HomePage extends TestBase {
 		tUtil.weClick(weAddActivity);
 		Thread.sleep(3000);
 		tUtil.weClick(weAddCareNote);
-		Thread.sleep(2000);
+		/*Thread.sleep(2000);
 		Actions actObjMethos = new Actions(driver);
 		actObjMethos.click(weSelectMethod).build().perform();
 		actObjMethos.sendKeys(Keys.ENTER, homeVisit).build().perform();
