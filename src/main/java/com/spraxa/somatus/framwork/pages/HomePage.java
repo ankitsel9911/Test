@@ -73,6 +73,9 @@ public class HomePage extends TestBase {
 
 	/////////////////////////////////
 	int intHome = new TestUtil().randomNumber(1, 3);
+	@FindBy(xpath = "//span[contains(text(),'Active Patients')]")
+	WebElement weActivePatient;
+	
 	@FindBy(xpath = "//td[contains(text(),'Shivam Taylor')]")
 	WebElement weRequiredPatientName;
 
@@ -117,8 +120,10 @@ public class HomePage extends TestBase {
 
 	public void verifyCareNoteSummaryButton() throws InterruptedException {
 		Thread.sleep(4000);
+		
+		tUtil.weClick(weActivePatient);
 
-		Actions actObjRole = new Actions(driver);
+		/*Actions actObjRole = new Actions(driver);
 		actObjRole.click(weSelectName).build().perform();
 		actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
 		actObjRole.sendKeys(Keys.ENTER).build().perform();
@@ -157,8 +162,8 @@ public class HomePage extends TestBase {
 		Actions actObjSaveButtonNote = new Actions(driver);
 		actObjSaveButtonNote.click(addTaskSaveButtonNote).build().perform();
 		Thread.sleep(3000);
-	}
-
+	
+*/}
 	public void verifyCareNoteSummaryDetail() throws InterruptedException {
 		Actions actObjSummaryButton = new Actions(driver);
 		actObjSummaryButton.click(weCareNoteSummaryButton).build().perform();

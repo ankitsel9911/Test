@@ -46,7 +46,7 @@ public class HomePageTest extends TestBase {
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
-	//@Test
+	@Test
 	public void tc003() {
 		logger = extent.startTest(prop.getProperty("tc02StartTest"));
 		logger.log(LogStatus.PASS, prop.getProperty("logSuccessful"));
@@ -65,7 +65,7 @@ public class HomePageTest extends TestBase {
 		logger.log(LogStatus.PASS, prop.getProperty("fillAllRequiredField"));
 		logger.log(LogStatus.PASS, prop.getProperty("clickCareNoteSummary"));
 		homePage.verifyCareNoteSummaryButton();
-		homePage.verifyCareNoteSummaryDetail();
+		//homePage.verifyCareNoteSummaryDetail();
 
 		//String screenshotPath = ExtentReportsScreenShotClass.getScreenhot(driver, "tc_02Verify");
 		String screenshotPath = getScreenhot(driver, "tc_02Verify");
