@@ -46,8 +46,12 @@ public class HomePageTest extends TestBase {
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
+	@Test
+	public void tc_003() {
+		logger.log(LogStatus.PASS, prop.getProperty("logSuccessful"));
+	}
 	
-
+	
 	@Test
 	public void tc_01VerifyCareNoteSummaryButton() throws Exception {
 		logger = extent.startTest(prop.getProperty("tc02StartTest"));
