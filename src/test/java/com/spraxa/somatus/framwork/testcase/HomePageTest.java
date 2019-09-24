@@ -17,9 +17,9 @@ import com.spraxa.somatus.framwork.util.TestUtil;
 
 public class HomePageTest extends TestBase {
 
-	LoginPage loginPage;
-	HomePage homePage;
-	TestUtil testUtil;
+	LoginPage loginPage=new LoginPage();
+	HomePage homePage=new HomePage();
+	TestUtil testUtil=new TestUtil();
 
 	ExtentReports extent;
 	ExtentTest logger;
