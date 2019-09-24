@@ -56,7 +56,7 @@ public class TestBase {
 			driver = new InternetExplorerDriver();
 		}
 
-		driver.manage().window().setSize(new Dimension(1582, 1024));
+		driver.manage().window().setSize(new Dimension(1382, 754));
 		driver.manage().deleteAllCookies();
 		//driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
