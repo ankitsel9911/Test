@@ -50,6 +50,7 @@ public class HomePageTest extends TestBase {
 	public void tc003() {
 		logger = extent.startTest(prop.getProperty("tc02StartTest"));
 		logger.log(LogStatus.PASS, prop.getProperty("logSuccessful"));
+		extent.endTest(logger);
 	}
 
 	@Test
