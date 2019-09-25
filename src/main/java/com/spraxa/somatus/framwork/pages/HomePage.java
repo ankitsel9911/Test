@@ -32,19 +32,19 @@ public class HomePage extends TestBase {
 	///////////// TC_1//Verify Care Note Summary Button is disabled//////
 
 	@FindBy(xpath = "//div[@class='css-10nd86i basic-single']")
-	WebElement weSelectName;
+	private WebElement weSelectName;
 
 	@FindBy(xpath = "//table/tbody/tr[2]/td[5]")
-	WebElement wePatientName;
+	private WebElement wePatientName;
 
 	@FindBy(xpath = "//table/tbody/tr[1]/td[1]")
-	WebElement weClickPrograms;
+	private WebElement weClickPrograms;
 
 	@FindBy(xpath = "//button[contains(text(),'Care Note Summary')]")
-	WebElement weCheckDisableButton;
+	private WebElement weCheckDisableButton;
 
 	@FindBy(xpath = "//button[contains(text(),'Care Note Summary')]")
-	WebElement weCheckDisable;
+	private WebElement weCheckDisable;
 
 	public String getTextCheckDisableButton() {
 		return weCheckDisableButton.getText();
@@ -74,45 +74,46 @@ public class HomePage extends TestBase {
 	/////////////////////////////////
 	
 	@FindBy(xpath = "//span[contains(text(),'Active Patients')]")
-	WebElement weActivePatient;
+	private WebElement weActivePatient;
 	
 	@FindBy(xpath = "//table/tbody/tr[5]/td[5]")
-	WebElement weRequiredPatientName;
+	private WebElement weRequiredPatientName;
 
 	@FindBy(xpath = "//table/tbody/tr[3]/td[1]")
-	WebElement weProgramName;
+	private WebElement weProgramName;
 
 	@FindBy(xpath = "//button[@class='add-program-button dropdown-toggle']")
-	WebElement weAddActivity;
+	private WebElement weAddActivity;
 
 	@FindBy(xpath = "(//ul[@class='dropdown-menu show']/li)[3]//a")
-	WebElement weAddCareNote;
+	private WebElement weAddCareNote;
+	
 	@FindBy(xpath = "//div[contains(text(),'Select...')]")
-	WebElement weSelectMethod;
+	private WebElement weSelectMethod;
 
 	@FindBy(xpath = "//div[@class='ql-container ql-snow']//p")
-	WebElement weNoteComment;
+	private WebElement weNoteComment;
 
 	@FindBy(xpath = "//button[contains(text(),'Save')]")
-	WebElement addTaskSaveButtonNote;
+	private WebElement addTaskSaveButtonNote;
 
 	@FindBy(xpath = "//button[contains(text(),'Care Note Summary')]")
-	WebElement weCareNoteSummaryButton;
+	private WebElement weCareNoteSummaryButton;
 
 	@FindBy(xpath = "//div[@class='sc-EHOje ldTBTR sc-ifAKCX dvxQVR']")
-	WebElement weCareNoteNext;
+	private WebElement weCareNoteNext;
 
 	@FindBy(xpath = "//div[@class='sc-bZQynM hzJOec sc-ifAKCX dvxQVR']")
-	WebElement weCareNotePre;
+	private WebElement weCareNotePre;
 
 	@FindBy(xpath = "//div[1]/p[2]")
-	WebElement weEditNote;
+	private WebElement weEditNote;
 
 	@FindBy(xpath = "//h2[contains(text(),'Care Note Summary')]")
-	WebElement weVerifyCareNoteSummary;
+	private WebElement weVerifyCareNoteSummary;
 
 	@FindBy(xpath = "//div[@class='sc-EHOje ldTBTR sc-ifAKCX dvxQVR']")
-	WebElement weClickNextCareNote;
+	private WebElement weClickNextCareNote;
 
 	public String getCareNoteSummary() {
 		return weVerifyCareNoteSummary.getText();
@@ -188,10 +189,10 @@ public class HomePage extends TestBase {
 
 	//////////////// TC003/////////////////////
 	@FindBy(xpath = "//table[@class='ant-table-fixed']//tr[1]//td[1]")
-	WebElement weCreatedOnF;
+	private WebElement weCreatedOnF;
 
 	@FindBy(xpath = "//table[@class='ant-table-fixed']//tr[2]//td[1]")
-	WebElement weModifiedOn;
+	private WebElement weModifiedOn;
 
 	public void VerifyOrderCareNotes() throws InterruptedException {
 		Thread.sleep(4000);
