@@ -119,7 +119,7 @@ public class HomePage extends TestBase {
 	}
 
 	public void verifyCareNoteSummaryButton() throws InterruptedException {
-		Thread.sleep(4000);
+		Thread.sleep(10000);
 		
 		//tUtil.weClick(weActivePatient);
 
@@ -129,7 +129,7 @@ public class HomePage extends TestBase {
 		actObjRole.click(weSelectName).build().perform();
 		actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
 		actObjRole.sendKeys(Keys.ENTER).build().perform();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		tUtil.weClick(weRequiredPatientName);
 //		tUtil.weClick(weRequiredPatientName);
 //		
