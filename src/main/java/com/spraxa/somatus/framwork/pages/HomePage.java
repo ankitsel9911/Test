@@ -17,7 +17,7 @@ import com.spraxa.somatus.framwork.base.TestBase;
 import com.spraxa.somatus.framwork.util.TestUtil;
 
 public class HomePage extends TestBase {
-	TestUtil tUtil = new TestUtil();
+	public static TestUtil tUtil;
 	String strTelePhone = "Telephone";
 	String homeVisit = "Home Visit";
 	ExtentTest logger;
