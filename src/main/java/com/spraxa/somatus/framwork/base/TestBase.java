@@ -38,7 +38,7 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void initilization() {
 		String browserName = prop.getProperty("browser");
 		if (browserName.equals("chrome")) {
