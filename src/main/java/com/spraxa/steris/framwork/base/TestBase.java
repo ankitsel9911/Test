@@ -2,12 +2,18 @@
 
 package com.spraxa.steris.framwork.base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+import com.google.common.io.Files;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -51,15 +57,24 @@ public class TestBase {
 			System.setProperty("webdriver.ie.driver", "drivers/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		}
-
 		driver.manage().window();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("url"));
 
+	}
+	
+	public static String getScreenhot(WebDriver driver, String screenshotName) throws Exception {
+		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+	            //after execution, you could see a folder "FailedTestsScreenshots" under src folder
+		String destination = System.getProperty("user.dir") + "/PassedTestsScreenshots/"+screenshotName+dateName+".png";
+		File finalDestination = new File(destination);
+		Files.copy(source, finalDestination);
+		return destination;
 	}
 
 }
