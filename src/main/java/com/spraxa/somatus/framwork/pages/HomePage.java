@@ -17,7 +17,7 @@ import com.spraxa.somatus.framwork.base.TestBase;
 import com.spraxa.somatus.framwork.util.TestUtil;
 
 public class HomePage extends TestBase {
-	public static TestUtil tUtil;
+	 TestUtil tUtil=new TestUtil();
 	String strTelePhone = "Telephone";
 	String homeVisit = "Home Visit";
 	ExtentTest logger;
@@ -76,7 +76,7 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//span[contains(text(),'Active Patients')]")
 	WebElement weActivePatient;
 	
-	@FindBy(xpath = "//table/tbody/tr[5]/td[6]")
+	@FindBy(xpath = "//table/tbody/tr[5]/td[5]")
 	WebElement weRequiredPatientName;
 
 	@FindBy(xpath = "//table/tbody/tr[3]/td[1]")
@@ -123,9 +123,14 @@ public class HomePage extends TestBase {
 		
 		//tUtil.weClick(weActivePatient);
 
-		tUtil.actionWithSendkeys(weSelectName, "Neha Aggarwal",driver);
+		//tUtil.actionWithSendkeys(weSelectName, "Neha Aggarwal",driver);
 		
-		tUtil.jsClick(weRequiredPatientName);
+		Actions actObjRole = new Actions(driver);
+		actObjRole.click(weSelectName).build().perform();
+		actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
+		actObjRole.sendKeys(Keys.ENTER).build().perform();
+		Thread.sleep(5000);
+		tUtil.weClick(weRequiredPatientName);
 //		tUtil.weClick(weRequiredPatientName);
 //		
 //	    tUtil.weClick(weProgramName);
