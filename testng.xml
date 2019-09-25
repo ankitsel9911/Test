@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.spraxa.somatus.framwork.testcase.HomePageTest"/>
+      <class name="com.spraxa.steris.framwork.testcase.HomePageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
