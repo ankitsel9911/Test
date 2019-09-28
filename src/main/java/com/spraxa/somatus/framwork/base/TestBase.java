@@ -43,7 +43,7 @@ public class TestBase {
 		if (browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("start-maximized");
+			//options.addArguments("start-maximized");
 			driver = new ChromeDriver(options);
 		} else if (browserName.equals("FF")) {
 			System.setProperty("webdriver.gecko.driver", "driver/chromedriver.exe");

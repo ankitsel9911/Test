@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -127,7 +128,9 @@ public class HomePage extends TestBase {
 		//tUtil.actionWithSendkeys(weSelectName, "Neha Aggarwal",driver);
 		
 		Actions actObjRole = new Actions(driver);
-		actObjRole.click(weSelectName).build().perform();
+		//actObjRole.click(weSelectName).build().perform();
+		JavascriptExecutor jse=(JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].click()", weSelectName);
 		actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
 		actObjRole.sendKeys(Keys.ENTER).build().perform();
 		Thread.sleep(15000);
