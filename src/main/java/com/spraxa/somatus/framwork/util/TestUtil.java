@@ -12,24 +12,25 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.spraxa.somatus.framwork.base.TestBase;
+
 public class TestUtil {
 	Actions actObj;
-	public static WebDriver driver;
 	public static long PAGE_LOAD_TIMEOUT = 80;
 	public static long IMPLICIT_WAIT = 80;
 	public long WAIT_FOR_ACTIONA = 20;
 	
 	public void switchTOFrame() {
-		driver.switchTo().frame("");
+		TestBase.driver.switchTo().frame("");
 	}
 
 	public void actionForSendKeys(WebElement forSendKeys, String value) {
-		 actObj=new Actions(driver);
+		 actObj=new Actions(TestBase.driver);
 		actObj.sendKeys(value).build().perform();
 	}
 	
 	public void actionWithSendkeys(WebElement weAction, String value, WebDriver driver) {
-		Actions actObjRole = new Actions(driver);
+		Actions actObjRole = new Actions(TestBase.driver);
 		actObjRole.click(weAction).build().perform();
 		actObjRole.sendKeys(Keys.ENTER, value).build().perform();
 		actObjRole.sendKeys(Keys.ENTER).build().perform();
@@ -39,7 +40,7 @@ public class TestUtil {
 		try {
 			weElement.click();
 		}catch(Exception e) {
-			JavascriptExecutor jse=(JavascriptExecutor)driver;
+			JavascriptExecutor jse=(JavascriptExecutor)TestBase.driver;
 			jse.executeScript("arguments[0].click()", weElement);
 		}
 		
@@ -47,19 +48,19 @@ public class TestUtil {
 	}
 	
 	public  void webDriverWait(String xpath) {
-		WebElement sendIssue = (WebElement) new WebDriverWait(driver, 10)
+		WebElement sendIssue = (WebElement) new WebDriverWait(TestBase.driver, 10)
 				.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 		sendIssue.click();
 	}
 
 	public void jsClick(WebElement webObject) {
-		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		JavascriptExecutor executor = (JavascriptExecutor) TestBase.driver;
 		executor.executeScript("arguments[0].click();", webObject);
 	}
 	
 
 	public void actionSelectclass(WebElement weSelect, String strVal) {
-		Actions actProgramName=new Actions(driver);
+		Actions actProgramName=new Actions(TestBase.driver);
 		actProgramName.click(weSelect).build().perform();
 		actProgramName.sendKeys(Keys.ENTER,strVal).build().perform();
 		actProgramName.sendKeys(Keys.ENTER).build().perform();
@@ -68,35 +69,35 @@ public class TestUtil {
 	}
 
 	public void actionClass(WebElement actObjDoubleClick) {
-		 actObj = new Actions(driver);
+		 actObj = new Actions(TestBase.driver);
 		actObj.doubleClick(actObjDoubleClick).build().perform();
 	}
 
 	public  void actionForClick(WebElement actObjForClick) {
-		 actObj = new Actions(driver);
+		 actObj = new Actions(TestBase.driver);
 		actObj.click(actObjForClick).build().perform();
 	}
 	
 	public  void actionForEnterButton(WebElement actObjForClick) {
-		 actObj = new Actions(driver);
+		 actObj = new Actions(TestBase.driver);
 		actObj.sendKeys(Keys.ENTER);
 	}
 
 	public void jsScroll(WebElement weScroll) {
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		JavascriptExecutor jse = (JavascriptExecutor)TestBase.driver;
 		jse.executeScript("window.scrollBy(0,10)");
 	}
 	
 	public  void actionCropImage(WebElement cropTracker) {
-		actObj = new Actions(driver);
+		actObj = new Actions(TestBase.driver);
 		actObj.moveToElement(cropTracker);
 		actObj.dragAndDropBy(cropTracker, 100, 120).build().perform();
 	}
 	
 	public void jsSendKeys(WebElement weSendKeys, String strName) {
-		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		JavascriptExecutor executor = (JavascriptExecutor) TestBase.driver;
 		///executor.executeScript("arguments[0].click();", webObject);
-		                       // JavascriptExecutor executor = (JavascriptExecutor) driver;
+		                       // JavascriptExecutor executor = (JavascriptExecutor) TestBase.driver;
 		//executor.executeScript("arguments[0].click();", weSendKeys);
 		executor.executeScript("document.getElementById(weSendKeys).value=strName;");
 	}
@@ -109,7 +110,7 @@ public class TestUtil {
 	}
 
 	public  void actionMoveToElement(WebElement target) {
-		Actions actObj = new Actions(driver);
+		Actions actObj = new Actions(TestBase.driver);
 		actObj.moveToElement(target).build().perform();
 	}
 
@@ -126,7 +127,7 @@ public class TestUtil {
 	}
 	
 	public void cropImage(WebElement cropTracker) {
-		Actions crop = new Actions(driver);
+		Actions crop = new Actions(TestBase.driver);
 		crop.dragAndDropBy(cropTracker, 200,220).build().perform();
 	}
 	
