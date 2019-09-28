@@ -132,17 +132,19 @@ public class HomePage extends TestBase {
 		tUtil.weClick(weSelectName);
 		actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
 		actObjRole.sendKeys(Keys.ENTER).build().perform();
-		Thread.sleep(15000);
+		Thread.sleep(5000);
 		tUtil.weClick(weRequiredPatientName);
-//		tUtil.weClick(weRequiredPatientName);
-//		
-//	    tUtil.weClick(weProgramName);
-//		Thread.sleep(2000);
-//		tUtil.weClick(weAddActivity);
-//		Thread.sleep(3000);
-//		tUtil.weClick(weAddCareNote);
-//		Thread.sleep(2000);
-		/*Actions actObjMethos = new Actions(driver);
+		Thread.sleep(3000);
+	    tUtil.weClick(weProgramName);
+	    Thread.sleep(2000);
+	    
+	    tUtil.weClick(weAddActivity);
+		Thread.sleep(3000);
+		tUtil.weClick(weAddCareNote);
+		Thread.sleep(2000);
+	    
+	    
+		Actions actObjMethos = new Actions(driver);
 		actObjMethos.click(weSelectMethod).build().perform();
 		actObjMethos.sendKeys(Keys.ENTER, homeVisit).build().perform();
 		actObjMethos.sendKeys(Keys.ENTER).build().perform();
@@ -166,7 +168,7 @@ public class HomePage extends TestBase {
 
 		Actions actObjSaveButtonNote = new Actions(driver);
 		actObjSaveButtonNote.click(addTaskSaveButtonNote).build().perform();
-		Thread.sleep(3000);*/
+		Thread.sleep(3000);
 	}
 
 	public void verifyCareNoteSummaryDetail() throws InterruptedException {
@@ -174,7 +176,7 @@ public class HomePage extends TestBase {
 		actObjSummaryButton.click(weCareNoteSummaryButton).build().perform();
 		Thread.sleep(3000);
 
-		Actions actObjCareNoteNext = new Actions(driver);
+		/*Actions actObjCareNoteNext = new Actions(driver);
 		actObjCareNoteNext.click(weCareNoteNext).build().perform();
 		Thread.sleep(2000);
 		actObjCareNoteNext.click(weCareNoteNext).build().perform();
@@ -185,7 +187,7 @@ public class HomePage extends TestBase {
 		actObjCareNoteNext.click(weCareNoteNext).build().perform();
 		Thread.sleep(3000);
 		Actions actObjCareNotePre = new Actions(driver);
-		actObjCareNotePre.click(weCareNotePre).build().perform();
+		actObjCareNotePre.click(weCareNotePre).build().perform();*/
 
 	}
 
