@@ -162,7 +162,7 @@ public class HomePage extends TestBase {
 		Actions actObjSaveButtonNote = new Actions(driver);
 		actObjSaveButtonNote.click(addTaskSaveButtonNote).build().perform();
 		Thread.sleep(3000);
-		tUtil.weClick(weCareNoteSummaryButton);
+		//tUtil.weClick(weCareNoteSummaryButton);
 	}
 
 	public void verifyCareNoteSummaryDetail() throws InterruptedException {
