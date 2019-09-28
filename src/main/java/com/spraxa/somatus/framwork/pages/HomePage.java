@@ -122,13 +122,7 @@ public class HomePage extends TestBase {
 
 	public void verifyCareNoteSummaryButton() throws InterruptedException {
 		Thread.sleep(15000);
-		
-		//tUtil.weClick(weActivePatient);
-
-		//tUtil.actionWithSendkeys(weSelectName, "Neha Aggarwal",driver);
-		
 		Actions actObjRole = new Actions(driver);
-		//actObjRole.click(weSelectName).build().perform();
 		tUtil.weClick(weSelectName);
 		actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
 		actObjRole.sendKeys(Keys.ENTER).build().perform();
@@ -172,9 +166,10 @@ public class HomePage extends TestBase {
 	}
 
 	public void verifyCareNoteSummaryDetail() throws InterruptedException {
-		Actions actObjSummaryButton = new Actions(driver);
-		actObjSummaryButton.click(weCareNoteSummaryButton).build().perform();
-		Thread.sleep(3000);
+		tUtil.weClick(weCareNoteSummaryButton);
+//		Actions actObjSummaryButton = new Actions(driver);
+//		actObjSummaryButton.click(weCareNoteSummaryButton).build().perform();
+//		Thread.sleep(3000);
 
 		/*Actions actObjCareNoteNext = new Actions(driver);
 		actObjCareNoteNext.click(weCareNoteNext).build().perform();
