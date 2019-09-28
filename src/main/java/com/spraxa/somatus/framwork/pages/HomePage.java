@@ -158,11 +158,12 @@ public class HomePage extends TestBase {
 		actObjType.sendKeys(Keys.ENTER, "Medication Reconciliation/Review").build().perform();
 		actObjType.sendKeys(Keys.ENTER).build().perform();
 		Thread.sleep(3000);
-
-//		Actions actObjSaveButtonNote = new Actions(driver);
-//		actObjSaveButtonNote.click(addTaskSaveButtonNote).build().perform();
+		
+		
 		tUtil.weClick(addTaskSaveButtonNote);
-		Thread.sleep(20000);
+//		ACTIONS ACTOBJSAVEBUTTONNOTE = NEW ACTIONS(DRIVER);
+//		actObjSaveButtonNote.click(addTaskSaveButtonNote).build().perform();
+		Thread.sleep(15000);
 		tUtil.weClick(weCareNoteSummaryButton);
 	}
 
