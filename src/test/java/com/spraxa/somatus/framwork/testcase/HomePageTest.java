@@ -83,7 +83,7 @@ public class HomePageTest extends TestBase {
 
 	
 
-	//@Test()
+	@Test()
 	public void tc_02VerifyAddCarePlan() throws Exception {
 		logger = extent.startTest(prop.getProperty("verifyAddCarePlan"));
 		logger.log(LogStatus.PASS, prop.getProperty("logSuccessful"));
