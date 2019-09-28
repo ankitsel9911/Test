@@ -255,6 +255,7 @@ public class HomePage extends TestBase {
 	}
 
 	public void VerifyAddCarePlan() throws InterruptedException {
+		Thread.sleep(15000);
 		Actions actObjRole = new Actions(driver);
 		tUtil.weClick(weSelectName);
 		actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
@@ -262,19 +263,19 @@ public class HomePage extends TestBase {
 		Thread.sleep(5000);
 		weRequiredPatientName.click();
 		
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		tUtil.weClick(weActivities);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		tUtil.weClick(weAddActivity);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		tUtil.weClick(weAddCarePlan);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		tUtil.weClick(weCheckBoxAlcohol);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		tUtil.weClick(weCheckBoxAchieveGlycemic);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		tUtil.weClick(weCheckBoxAddressBarriers);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 
 		tUtil.weClick(weGenerate);
 		Thread.sleep(12000);
