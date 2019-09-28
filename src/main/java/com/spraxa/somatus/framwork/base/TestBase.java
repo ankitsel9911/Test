@@ -53,7 +53,7 @@ public class TestBase {
 			driver = new InternetExplorerDriver();
 		}
 
-		//driver.manage().window().setSize(new Dimension(2560,1440));
+		driver.manage().window().setSize(new Dimension(1382,744));
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		//driver.manage().window().maximize();
