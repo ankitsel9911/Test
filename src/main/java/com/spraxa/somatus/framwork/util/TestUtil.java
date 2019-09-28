@@ -36,7 +36,14 @@ public class TestUtil {
 	}
 	//////////////////Click ///////////////////
 	public void weClick(WebElement weElement) {
-		weElement.click();
+		try {
+			weElement.click();
+		}catch(Exception e) {
+			JavascriptExecutor jse=(JavascriptExecutor)driver;
+			jse.executeScript("arguments[0].click()", weElement);
+		}
+		
+		
 	}
 	
 	public  void webDriverWait(String xpath) {

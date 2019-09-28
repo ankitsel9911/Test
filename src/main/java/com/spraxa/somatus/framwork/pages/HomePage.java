@@ -129,8 +129,7 @@ public class HomePage extends TestBase {
 		
 		Actions actObjRole = new Actions(driver);
 		//actObjRole.click(weSelectName).build().perform();
-		JavascriptExecutor jse=(JavascriptExecutor)driver;
-		jse.executeScript("arguments[0].click()", weSelectName);
+		tUtil.weClick(weSelectName);
 		actObjRole.sendKeys(Keys.ENTER, "Neha Aggarwal").build().perform();
 		actObjRole.sendKeys(Keys.ENTER).build().perform();
 		Thread.sleep(15000);
