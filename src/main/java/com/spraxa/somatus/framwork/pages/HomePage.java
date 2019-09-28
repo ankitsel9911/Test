@@ -161,7 +161,7 @@ public class HomePage extends TestBase {
 
 		Actions actObjSaveButtonNote = new Actions(driver);
 		actObjSaveButtonNote.click(addTaskSaveButtonNote).build().perform();
-		Thread.sleep(3000);
+		Thread.sleep(15000);
 		tUtil.weClick(weCareNoteSummaryButton);
 	}
 
