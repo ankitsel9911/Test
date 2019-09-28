@@ -131,7 +131,6 @@ public class HomePage extends TestBase {
 		Thread.sleep(3000);
 	    tUtil.weClick(weProgramName);
 	    Thread.sleep(2000);
-	    
 	    tUtil.weClick(weAddActivity);
 		Thread.sleep(3000);
 		tUtil.weClick(weAddCareNote);
@@ -163,10 +162,11 @@ public class HomePage extends TestBase {
 		Actions actObjSaveButtonNote = new Actions(driver);
 		actObjSaveButtonNote.click(addTaskSaveButtonNote).build().perform();
 		Thread.sleep(3000);
+		tUtil.weClick(weCareNoteSummaryButton);
 	}
 
 	public void verifyCareNoteSummaryDetail() throws InterruptedException {
-		tUtil.weClick(weCareNoteSummaryButton);
+		//tUtil.weClick(weCareNoteSummaryButton);
 //		Actions actObjSummaryButton = new Actions(driver);
 //		actObjSummaryButton.click(weCareNoteSummaryButton).build().perform();
 //		Thread.sleep(3000);
