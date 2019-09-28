@@ -95,7 +95,7 @@ public class HomePageTest extends TestBase {
 		homePage.VerifyAddCarePlan();
 		String screenshotPath = getScreenhot(driver, "verifyAddCarePlan");
 		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
-		logger.log(LogStatus.PASS, prop.getProperty("activities"));
+		//logger.log(LogStatus.PASS, prop.getProperty("activities"));
 		
 		extent.endTest(logger);
 	}
