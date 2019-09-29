@@ -69,7 +69,7 @@ public class TestBase {
 	TakesScreenshot ts = (TakesScreenshot) driver;
 	File source = ts.getScreenshotAs(OutputType.FILE);
             //after execution, you could see a folder "FailedTestsScreenshots" under src folder
-	String destination = System.getProperty("user.dir") + "/PassedTestsScreenshots/"+screenshotName+dateName+".png";
+	String destination = System.getProperty("user.dir") + "//PassedTestsScreenshots//"+screenshotName+".png";
 	File finalDestination = new File(destination);
 	Files.copy(source, finalDestination);
 	return destination;
