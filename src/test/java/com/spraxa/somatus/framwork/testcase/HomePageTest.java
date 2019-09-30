@@ -70,8 +70,8 @@ public class HomePageTest extends TestBase {
 		//homePage.verifyCareNoteSummaryDetail();
 
 		//String screenshotPath = ExtentReportsScreenShotClass.getScreenhot(driver, "tc_02Verify");
-		String screenshotPath = getScreenhot(driver, "tc_02Verify");
-		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
+//		String screenshotPath = getScreenhot(driver, "tc_02Verify");
+//		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
 
 		String actualCareNoteSummary = homePage.getCareNoteSummary();
 		String ExpectedCareNoteSummary = prop.getProperty("careNote");
@@ -81,7 +81,7 @@ public class HomePageTest extends TestBase {
 		extent.endTest(logger);
 	}	
 
-	//@Test()
+	@Test()
 	public void tc_02VerifyAddCarePlan() throws Exception {
 		logger = extent.startTest(prop.getProperty("verifyAddCarePlan"));
 		logger.log(LogStatus.PASS, prop.getProperty("logSuccessful"));
@@ -91,10 +91,12 @@ public class HomePageTest extends TestBase {
 		logger.log(LogStatus.PASS, prop.getProperty("addActivity"));
 		logger.log(LogStatus.PASS, prop.getProperty("clickAddCarePlan"));
 		homePage.VerifyAddCarePlan();
+		logger.log(LogStatus.PASS, "Add Program" + " - : " + prop.getProperty("weVerifyPropAddProgram"));
 //		String screenshotPath = getScreenhot(driver, "verifyAddCarePlan");
 //		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
 		String actualCareNoteSummary = homePage.weVerifyAddProgram();
 		String ExpectedCareNoteSummary = prop.getProperty("addProgram");
+		
 		if (actualCareNoteSummary.equalsIgnoreCase(ExpectedCareNoteSummary)) {
 			logger.log(LogStatus.PASS, "Add Program" + " - : " + prop.getProperty("weVerifyPropAddProgram"));
 		}
