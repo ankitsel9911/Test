@@ -70,8 +70,8 @@ public class HomePageTest extends TestBase {
 		//homePage.verifyCareNoteSummaryDetail();
 
 		//String screenshotPath = ExtentReportsScreenShotClass.getScreenhot(driver, "tc_02Verify");
-		String screenshotPath = getScreenhot(driver, "tc_02Verify");
-		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
+//		String screenshotPath = getScreenhot(driver, "tc_02Verify");
+//		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
 
 //		String actualCareNoteSummary = homePage.getCareNoteSummary();
 //		String ExpectedCareNoteSummary = prop.getProperty("careNote");
@@ -91,8 +91,8 @@ public class HomePageTest extends TestBase {
 		logger.log(LogStatus.PASS, prop.getProperty("addActivity"));
 		logger.log(LogStatus.PASS, prop.getProperty("clickAddCarePlan"));
 		homePage.VerifyAddCarePlan();
-		String screenshotPath = getScreenhot(driver, "verifyAddCarePlan");
-		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
+//		String screenshotPath = getScreenhot(driver, "verifyAddCarePlan");
+//		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
 		//logger.log(LogStatus.PASS, prop.getProperty("activities"));
 		extent.endTest(logger);
 	}
