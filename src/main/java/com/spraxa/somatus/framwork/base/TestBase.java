@@ -28,7 +28,7 @@ public class TestBase {
 			prop = new Properties();
 
 			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")
-					+ "\\src\\main\\java\\com\\spraxa\\somatus\\framwork\\config\\config.properties");
+					+ "/src/main/java/com/spraxa/somatus/framwork/config/config.properties");
 			prop.load(ip);
 
 		} catch (FileNotFoundException e) {

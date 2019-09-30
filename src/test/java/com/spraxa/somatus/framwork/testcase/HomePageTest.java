@@ -46,7 +46,7 @@ public class HomePageTest extends TestBase {
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
-	@Test
+	//@Test
 	public void tc003() throws Exception {
 		logger = extent.startTest(prop.getProperty("tc02StartTest"));
 		logger.log(LogStatus.PASS, prop.getProperty("logSuccessful"));
@@ -79,9 +79,7 @@ public class HomePageTest extends TestBase {
 //			logger.log(LogStatus.PASS, actualCareNoteSummary + " - : " + prop.getProperty("userClick"));
 //		}
 		extent.endTest(logger);
-	}
-
-	
+	}	
 
 	@Test()
 	public void tc_02VerifyAddCarePlan() throws Exception {
@@ -96,7 +94,6 @@ public class HomePageTest extends TestBase {
 		String screenshotPath = getScreenhot(driver, "verifyAddCarePlan");
 		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
 		//logger.log(LogStatus.PASS, prop.getProperty("activities"));
-		
 		extent.endTest(logger);
 	}
 
