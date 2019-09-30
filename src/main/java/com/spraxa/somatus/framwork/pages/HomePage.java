@@ -143,7 +143,7 @@ public class HomePage extends TestBase {
 		Thread.sleep(4000);
 		Actions actObjInteractionWith = new Actions(driver);
 		actObjInteractionWith.click(weSelectMethod).build().perform();
-		actObjInteractionWith.sendKeys(Keys.ENTER, "ggbgbg (DME Supplier)").build().perform();
+		actObjInteractionWith.sendKeys(Keys.ENTER, "Test (Nephrologist)").build().perform();
 		actObjInteractionWith.sendKeys(Keys.ENTER).build().perform();
 		Thread.sleep(4000);
 
@@ -154,38 +154,16 @@ public class HomePage extends TestBase {
 
 		Actions actObjType = new Actions(driver);
 		actObjType.click(weSelectMethod).build().perform();
-		actObjType.sendKeys(Keys.ENTER, "Medication Reconciliation/Review").build().perform();
+		actObjType.sendKeys(Keys.ENTER, "Assessment").build().perform();
 		actObjType.sendKeys(Keys.ENTER).build().perform();
 		Thread.sleep(3000);
 		
-		
 		tUtil.weClick(addTaskSaveButtonNote);
-//		ACTIONS ACTOBJSAVEBUTTONNOTE = NEW ACTIONS(DRIVER);
-//		actObjSaveButtonNote.click(addTaskSaveButtonNote).build().perform();
 		Thread.sleep(15000);
 		tUtil.weClick(weCareNoteSummaryButton);
+		Thread.sleep(1000);
 	}
 
-	public void verifyCareNoteSummaryDetail() throws InterruptedException {
-		//tUtil.weClick(weCareNoteSummaryButton);
-//		Actions actObjSummaryButton = new Actions(driver);
-//		actObjSummaryButton.click(weCareNoteSummaryButton).build().perform();
-//		Thread.sleep(3000);
-
-		/*Actions actObjCareNoteNext = new Actions(driver);
-		actObjCareNoteNext.click(weCareNoteNext).build().perform();
-		Thread.sleep(2000);
-		actObjCareNoteNext.click(weCareNoteNext).build().perform();
-		Thread.sleep(2000);
-		actObjCareNoteNext.click(weCareNoteNext).build().perform();
-		Thread.sleep(4000);
-
-		actObjCareNoteNext.click(weCareNoteNext).build().perform();
-		Thread.sleep(3000);
-		Actions actObjCareNotePre = new Actions(driver);
-		actObjCareNotePre.click(weCareNotePre).build().perform();*/
-
-	}
 
 	//////////////// TC003/////////////////////
 	@FindBy(xpath = "//table[@class='ant-table-fixed']//tr[1]//td[1]")
@@ -249,6 +227,13 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//button[contains(text(),'OK')]")
 	private WebElement weErrorOk;
 
+	@FindBy(xpath = "//a[contains(text(),'Add Program')]")
+	private WebElement weAddProgram;
+	
+	public String weVerifyAddProgram() {
+		return weAddProgram.getText();
+	}
+	
 	public String weErrorPatient() {
 		return wePatientError.getText();
 	}
@@ -275,7 +260,8 @@ public class HomePage extends TestBase {
 		Thread.sleep(5000);
 		tUtil.weClick(weCheckBoxAddressBarriers);
 		Thread.sleep(5000);
-
+		tUtil.weClick(weCheckBox4);
+		Thread.sleep(3000);
 		tUtil.weClick(weGenerate);
 		Thread.sleep(12000);
 

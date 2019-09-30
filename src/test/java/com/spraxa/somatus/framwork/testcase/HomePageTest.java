@@ -73,11 +73,11 @@ public class HomePageTest extends TestBase {
 //		String screenshotPath = getScreenhot(driver, "tc_02Verify");
 //		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
 
-//		String actualCareNoteSummary = homePage.getCareNoteSummary();
-//		String ExpectedCareNoteSummary = prop.getProperty("careNote");
-//		if (actualCareNoteSummary.equalsIgnoreCase(ExpectedCareNoteSummary)) {
-//			logger.log(LogStatus.PASS, actualCareNoteSummary + " - : " + prop.getProperty("userClick"));
-//		}
+		String actualCareNoteSummary = homePage.getCareNoteSummary();
+		String ExpectedCareNoteSummary = prop.getProperty("careNote");
+		if (actualCareNoteSummary.equalsIgnoreCase(ExpectedCareNoteSummary)) {
+			logger.log(LogStatus.PASS, actualCareNoteSummary + " - : " + prop.getProperty("userClick"));
+		}
 		extent.endTest(logger);
 	}	
 
@@ -93,6 +93,11 @@ public class HomePageTest extends TestBase {
 		homePage.VerifyAddCarePlan();
 //		String screenshotPath = getScreenhot(driver, "verifyAddCarePlan");
 //		logger.log(LogStatus.PASS, logger.addScreenCapture(screenshotPath));
+		String actualCareNoteSummary = homePage.weVerifyAddProgram();
+		String ExpectedCareNoteSummary = prop.getProperty("addProgram");
+		if (actualCareNoteSummary.equalsIgnoreCase(ExpectedCareNoteSummary)) {
+			logger.log(LogStatus.PASS, "Add Program" + " - : " + prop.getProperty("weVerifyPropAddProgram"));
+		}
 		//logger.log(LogStatus.PASS, prop.getProperty("activities"));
 		extent.endTest(logger);
 	}
